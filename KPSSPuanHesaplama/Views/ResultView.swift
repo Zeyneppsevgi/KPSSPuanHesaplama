@@ -11,7 +11,10 @@ struct ResultView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                List(0..<50) { item in
+                    
+                    Text("Hesaplama \(item)")
+                }
             }
             .navigationTitle("Geçmiş Hesaplamalar")
         }

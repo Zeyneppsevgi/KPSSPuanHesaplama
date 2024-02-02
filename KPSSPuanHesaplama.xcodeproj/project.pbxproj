@@ -13,6 +13,11 @@
 		701E15362B6AB22200035591 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E15352B6AB22200035591 /* RootView.swift */; };
 		701E153A2B6AB30900035591 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E15392B6AB30900035591 /* MainView.swift */; };
 		701E153C2B6AB32800035591 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E153B2B6AB32800035591 /* ResultView.swift */; };
+		70D6ABF52B6D052B005D2D0F /* OrtaogretimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABF42B6D052B005D2D0F /* OrtaogretimView.swift */; };
+		70D6ABF72B6D054A005D2D0F /* OnlisansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABF62B6D054A005D2D0F /* OnlisansView.swift */; };
+		70D6ABF92B6D05B3005D2D0F /* LisansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABF82B6D05B3005D2D0F /* LisansView.swift */; };
+		70D6ABFB2B6D0610005D2D0F /* EgitimBilimleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABFA2B6D0610005D2D0F /* EgitimBilimleriView.swift */; };
+		70D6ABFD2B6D062A005D2D0F /* OABTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABFC2B6D062A005D2D0F /* OABTView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		701E15352B6AB22200035591 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		701E15392B6AB30900035591 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		701E153B2B6AB32800035591 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		70D6ABF42B6D052B005D2D0F /* OrtaogretimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrtaogretimView.swift; sourceTree = "<group>"; };
+		70D6ABF62B6D054A005D2D0F /* OnlisansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlisansView.swift; sourceTree = "<group>"; };
+		70D6ABF82B6D05B3005D2D0F /* LisansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisansView.swift; sourceTree = "<group>"; };
+		70D6ABFA2B6D0610005D2D0F /* EgitimBilimleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgitimBilimleriView.swift; sourceTree = "<group>"; };
+		70D6ABFC2B6D062A005D2D0F /* OABTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OABTView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,11 @@
 				701E15352B6AB22200035591 /* RootView.swift */,
 				701E15392B6AB30900035591 /* MainView.swift */,
 				701E153B2B6AB32800035591 /* ResultView.swift */,
+				70D6ABF42B6D052B005D2D0F /* OrtaogretimView.swift */,
+				70D6ABF62B6D054A005D2D0F /* OnlisansView.swift */,
+				70D6ABF82B6D05B3005D2D0F /* LisansView.swift */,
+				70D6ABFA2B6D0610005D2D0F /* EgitimBilimleriView.swift */,
+				70D6ABFC2B6D062A005D2D0F /* OABTView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,11 +141,11 @@
 			};
 			buildConfigurationList = 701E151F2B6A7FB300035591 /* Build configuration list for PBXProject "KPSSPuanHesaplama" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = tr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				tr,
 			);
 			mainGroup = 701E151B2B6A7FB300035591;
 			productRefGroup = 701E15252B6A7FB400035591 /* Products */;
@@ -159,10 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D6ABF92B6D05B3005D2D0F /* LisansView.swift in Sources */,
 				701E15362B6AB22200035591 /* RootView.swift in Sources */,
+				70D6ABF52B6D052B005D2D0F /* OrtaogretimView.swift in Sources */,
 				701E153C2B6AB32800035591 /* ResultView.swift in Sources */,
+				70D6ABF72B6D054A005D2D0F /* OnlisansView.swift in Sources */,
 				701E153A2B6AB30900035591 /* MainView.swift in Sources */,
 				701E15282B6A7FB400035591 /* KPSSPuanHesaplamaApp.swift in Sources */,
+				70D6ABFB2B6D0610005D2D0F /* EgitimBilimleriView.swift in Sources */,
+				70D6ABFD2B6D062A005D2D0F /* OABTView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
