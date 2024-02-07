@@ -22,7 +22,7 @@ struct HesaplaButton: View {
                 .padding(10)
                 .frame(maxWidth: .infinity)
         })
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
         .tint(.main)
     }
 }
