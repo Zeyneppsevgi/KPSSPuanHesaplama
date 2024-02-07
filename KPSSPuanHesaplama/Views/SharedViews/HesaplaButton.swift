@@ -13,14 +13,15 @@ struct HesaplaButton: View {
     let action: ()-> Void
     
     var body: some View {
+        
         Button(action: {
             action()
         }, label: {
-            Text(title)
-                .bold()
-                .font(.title2)
-                .padding(10)
+            Label(title, systemImage: "plus.forwardslash.minus")
+                .font(.title)
+                .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
+
         })
         .buttonStyle(.borderedProminent)
         .tint(.main)
