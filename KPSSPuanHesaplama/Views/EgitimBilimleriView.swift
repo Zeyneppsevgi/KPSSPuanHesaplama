@@ -21,7 +21,7 @@ struct EgitimBilimleriView: View {
     @State private var sonucEB2022: Double = 0
     @State private var sonuc2023: Double = 0
     @State private var sonucEB2023: Double = 0
-    
+    @State private var isShowingSheet = false
     var body: some View {
         VStack {
             Form { //ekrandaki bileşen nesneleri tutmak için form lazım
@@ -35,6 +35,7 @@ struct EgitimBilimleriView: View {
                 } header: {
                     Text("Genel Kültür")
                         .textCase(.none)
+                        .foregroundColor(.main)
                 } footer: {
                     if(gkDogruSayisi + gkYanlisSayisi > 60) {
                         Text("Toplam doğru ve yanlış sayıları 60 'ı geçemez.")
@@ -52,6 +53,7 @@ struct EgitimBilimleriView: View {
                 } header: {
                     Text("Genel Yetenek")
                         .textCase(.none)
+                        .foregroundColor(.main)
                 } footer: {
                     if(ebDogruSayisi + ebYanlisSayisi > 80) {
                         Text("Toplam doğru ve yanlış sayıları 60 'ı geçemez.")
@@ -66,60 +68,36 @@ struct EgitimBilimleriView: View {
                     Stepper("Yanlış Sayısı: \(ebYanlisSayisi,specifier: "%.0f")", value: $ebYanlisSayisi, in: 0...80)
                         .sensoryFeedback(.selection, trigger: ebYanlisSayisi)
                         .bold()
+                    HesaplaButton(title: "Hesapla") {
+                        let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
+                        let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
+                        let ebNet = ebDogruSayisi - (ebYanlisSayisi / 4)
+                     
+                            sonucEB2022 = 36.812 + gyNet * 0.3985 + gkNet * 0.3512 + ebNet * 0.34714
+                            sonuc2022 = 48.616 + gyNet * 0.4756 + gkNet * 0.4192
+                            
+                            sonucEB2023 = 40.405 + gyNet * 0.3493 + gkNet * 0.3672 + ebNet * 0.37145
+                            sonuc2023 = 51.209 + gyNet * 0.537 + gkNet * 0.418
+                        isShowingSheet.toggle()
+                        
+                        
+                    }
+                    .disabled(formKontrol)
+                    .sensoryFeedback(.success, trigger: sonuc2022)
+                    .sheet(isPresented: $isShowingSheet) {
+                        SonucView(sonuc2022: sonuc2022, sonucEB2022: sonucEB2022, sonucOABT2022: nil, sonuc2023: sonuc2023, sonucEB2023: sonucEB2023, sonucOABT2023: nil)
+                    }
                 } header: {
                     Text("Eğitim Bilimleri")
                         .textCase(.none)
+                        .foregroundColor(.main)
                 } footer: {
                     if(ebDogruSayisi + ebYanlisSayisi > 80) {
                         Text("Toplam doğru ve yanlış sayıları 80 'i geçemez.")
                             .foregroundStyle(.red)
                     }
                 }
-                Section {
-                    VStack(alignment: .leading) {
-                        Text(" 2023 P3(Memur): \(sonuc2023, specifier: "%.3f")")
-                            .bold()
-                        Text(" 2023 P310(Öğretmen): \(sonucEB2023, specifier: "%.3f")")
-                            .bold()
-
-                    }
-                    VStack(alignment: .leading) {
-                        Text(" 2022 P3(Memur): \(sonuc2022, specifier: "%.3f")")
-                            .bold()
-                        Text(" 2022 P310(Öğretmen): \(sonucEB2022, specifier: "%.3f")")
-                            .bold()
-
-                    }
-                   
-                    
-
-                    
-                    
-                    HesaplaButton(title: "Hesapla") {
-                        let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
-                        let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
-                        let ebNet = ebDogruSayisi - (ebYanlisSayisi / 4)
-                        withAnimation { //animasyon değeri sonuç hesaplandıktan sonra başka bir yerde kullanıyorsak animasyonla olacak
-                            sonucEB2022 = 36.812 + gyNet * 0.3985 + gkNet * 0.3512 + ebNet * 0.34714
-                            sonuc2022 = 48.616 + gyNet * 0.4756 + gkNet * 0.4192
-                            
-                            sonucEB2023 = 40.405 + gyNet * 0.3493 + gkNet * 0.3672 + ebNet * 0.37145
-                            sonuc2023 = 51.209 + gyNet * 0.537 + gkNet * 0.418
-                        }
-                        
-                    }
-                    .disabled(formKontrol)
-                    .sensoryFeedback(.success, trigger: sonuc2022)
-                } header: {
-                    Text("Sonuç")
-                        .textCase(.none)
-                }footer: {
-                    if(gyDogruSayisi + gyYanlisSayisi > 60) {
-                        Text("Toplam doğru ve yanlış sayıları 60 'ı geçemez.")
-                            .foregroundStyle(.red)
-                    }
-                    
-                }
+          
             }
         }
         .navigationTitle("Eğitim Bilimleri")

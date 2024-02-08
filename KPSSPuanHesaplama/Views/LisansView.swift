@@ -29,6 +29,7 @@ struct LisansView: View {
                 } header: {
                     Text("Genel Kültür")
                         .textCase(.none)
+                        .foregroundColor(.main)
                 } footer: {
                     if(gkDogruSayisi + gkYanlisSayisi > 60) {
                         Text("Toplam doğru ve yanlış sayıları 60 'ı geçemez.")
@@ -47,6 +48,7 @@ struct LisansView: View {
                 } header: {
                     Text("Genel Yetenek")
                         .textCase(.none)
+                        .foregroundColor(.main)
                 }
                 Section {
                     Text(" 2022 KPSS Puanı: \(sonuc2022, specifier: "%.3f")")
@@ -69,6 +71,7 @@ struct LisansView: View {
                 } header: {
                     Text("Sonuç")
                         .textCase(.none)
+                        .foregroundColor(.main)
                 }footer: {
                     if(gyDogruSayisi + gyYanlisSayisi > 60) {
                         Text("Toplam doğru ve yanlış sayıları 60 'ı geçemez.")
