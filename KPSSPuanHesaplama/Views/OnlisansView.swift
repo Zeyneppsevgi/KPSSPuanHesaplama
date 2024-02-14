@@ -58,8 +58,11 @@ struct OnlisansView: View {
                         let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
                         let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
                         withAnimation { //animasyon değeri sonuç hesaplandıktan sonra başka bir yerde kullanıyorsak animasyonla olacak
-                            sonuc = 53.816 + gyNet * 0.43 + gkNet * 0.397
+                            //sonuc = 53.816 + gyNet * 0.43 + gkNet * 0.397
+                            sonuc = Constants.onlisansPuan + gyNet * Constants.onlisansGYKatsayi + gkNet * Constants.onlisansGKKatsayi
                         }
+                    //    let result = Result(sinavAdi: "2022 Önlisans KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
+                                             //  modelContext.insert(result)
                         
                     }
                     .disabled(formKontrol)

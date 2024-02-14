@@ -20,6 +20,8 @@
 		70D6ABFD2B6D062A005D2D0F /* OABTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABFC2B6D062A005D2D0F /* OABTView.swift */; };
 		70D6AC002B6E4DA6005D2D0F /* HesaplaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6ABFF2B6E4DA6005D2D0F /* HesaplaButton.swift */; };
 		70E326652B74D23C00E31790 /* SonucView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E326642B74D23C00E31790 /* SonucView.swift */; };
+		70E326682B7D253E00E31790 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E326672B7D253E00E31790 /* Constants.swift */; };
+		70E3266B2B7D2B2100E31790 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3266A2B7D2B2100E31790 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		70D6ABFC2B6D062A005D2D0F /* OABTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OABTView.swift; sourceTree = "<group>"; };
 		70D6ABFF2B6E4DA6005D2D0F /* HesaplaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesaplaButton.swift; sourceTree = "<group>"; };
 		70E326642B74D23C00E31790 /* SonucView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonucView.swift; sourceTree = "<group>"; };
+		70E326672B7D253E00E31790 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70E3266A2B7D2B2100E31790 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		701E15262B6A7FB400035591 /* KPSSPuanHesaplama */ = {
 			isa = PBXGroup;
 			children = (
+				70E326692B7D2A9300E31790 /* Model */,
 				701E15382B6AB2AF00035591 /* Resources */,
 				701E15372B6AB28300035591 /* Views */,
 				701E152D2B6A7FB500035591 /* Preview Content */,
@@ -87,6 +92,7 @@
 		701E15372B6AB28300035591 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70E326662B7D252400E31790 /* Helpers */,
 				70D6ABFE2B6E4D7A005D2D0F /* SharedViews */,
 				701E15352B6AB22200035591 /* RootView.swift */,
 				701E15392B6AB30900035591 /* MainView.swift */,
@@ -116,6 +122,22 @@
 				70E326642B74D23C00E31790 /* SonucView.swift */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		70E326662B7D252400E31790 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				70E326672B7D253E00E31790 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		70E326692B7D2A9300E31790 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70E3266A2B7D2B2100E31790 /* Result.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D6AC002B6E4DA6005D2D0F /* HesaplaButton.swift in Sources */,
+				70E3266B2B7D2B2100E31790 /* Result.swift in Sources */,
 				70D6ABF92B6D05B3005D2D0F /* LisansView.swift in Sources */,
 				701E15362B6AB22200035591 /* RootView.swift in Sources */,
 				70D6ABF52B6D052B005D2D0F /* OrtaogretimView.swift in Sources */,
@@ -199,6 +222,7 @@
 				70D6ABFB2B6D0610005D2D0F /* EgitimBilimleriView.swift in Sources */,
 				70D6ABFD2B6D062A005D2D0F /* OABTView.swift in Sources */,
 				70E326652B74D23C00E31790 /* SonucView.swift in Sources */,
+				70E326682B7D253E00E31790 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

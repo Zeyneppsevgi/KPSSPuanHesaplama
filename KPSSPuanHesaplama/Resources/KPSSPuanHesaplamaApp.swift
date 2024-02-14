@@ -24,5 +24,6 @@ struct KPSSPuanHesaplamaApp: App {
         WindowGroup {
             RootView()
         }
+        .modelContainer(for:Result.self)
     }
 }

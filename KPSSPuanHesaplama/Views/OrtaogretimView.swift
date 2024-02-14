@@ -59,7 +59,8 @@ struct OrtaogretimView: View {
                         let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
                         let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
                         withAnimation { //animasyon değeri sonuç hesaplandıktan sonra başka bir yerde kullanıyorsak animasyonla olacak
-                            sonuc = 55.839 + gyNet * 0.348 + gkNet * 0.431
+                            
+                            sonuc = Constants.ortaogretimPuan + gyNet * Constants.ortaogretimGYKatsayi + gkNet * Constants.ortaogretimGKKatsayi
                         }
                         
                     }

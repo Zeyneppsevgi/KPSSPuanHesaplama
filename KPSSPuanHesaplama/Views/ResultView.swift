@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ResultView: View {
+    
     var body: some View {
         NavigationStack {
             VStack {
