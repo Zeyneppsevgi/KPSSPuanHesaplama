@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OrtaogretimView: View {
+    @Environment(\.modelContext) private var modelContext
+    
     @State private var gkDogruSayisi : Double = 30
     @State private var gkYanlisSayisi: Double = 0
     
@@ -62,6 +64,8 @@ struct OrtaogretimView: View {
                             
                             sonuc = Constants.ortaogretimPuan + gyNet * Constants.ortaogretimGYKatsayi + gkNet * Constants.ortaogretimGKKatsayi
                         }
+                        let result = Result(sinavAdi: "2022 Ortaöğretim KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
+                        modelContext.insert(result)
                         
                     }
                     .disabled(formKontrol)
